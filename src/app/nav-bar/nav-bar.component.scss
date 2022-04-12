@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+$fontColor: black;
+$fontFamily: 'Sofia',cursive;
+
+.text {
+    padding: 10px;
+    padding-left: 50px;
+    font-family: $fontFamily;
+    color: $fontColor;
+    padding-left: 20px; 
+    font-size: 200%;
+}
+
+.link {
+    font-size: 150%;
+    font-family: $fontFamily;
+    color: $fontColor;
+}

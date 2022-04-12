@@ -1,0 +1,55 @@
+<div>
+    <form #login="ngForm" (ngSubmit)="onSubmit(login)">
+        <div class="imgcontainer">
+          <img src="../assets/images/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="form-group container">
+            <div>
+                <label for="uname"><b>Username</b></label><br>
+                <input class="form-control inputbox" id="uname" name="uname" type="text" placeholder="Enter Username" [(ngModel)]="user.name" #name="ngModel" minlength="4" required>
+            </div>
+
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+              isValid=false;
+
+              <div *ngIf="name.errors?.['required']">
+                Name is required.
+              </div>
+              <div *ngIf="name.errors?.['minlength']">
+                Name must be at least 4 characters long.
+              </div>
+            </div>
+
+            <div>
+                <label for="psw"><b>Password</b></label><br>
+                <input class="form-control inputbox" id="psw" name="psw" type="password" placeholder="Enter Password" #psw="ngModel" minlength="4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" [(ngModel)]="user.psw" required>
+            </div>
+    
+            <div *ngIf="psw.invalid && (psw.dirty || psw.touched)" class="alert">
+              isValid=false;
+              <div *ngIf="psw.errors?.['required']">
+                Password is required.
+              </div>
+
+              <div *ngIf="psw.errors?.['minlength']">
+                psw must be at least 4 characters long.
+              </div>
+            </div>
+
+            <div *ngIf="isValid">
+              Submitted!!
+            </div>
+            
+
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+      </div>
+</div>

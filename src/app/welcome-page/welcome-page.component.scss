@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+$fontFamily: 'Sofia',cursive;
+
+.button {
+    background-color: white;
+    border: 1px double black;
+    border-radius: 100%;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .button:hover{
+      background-color: #f7ad6f;
+      color: white;
+  }
+
+
+  html {
+    background-color: #f7ad6f;
+  }

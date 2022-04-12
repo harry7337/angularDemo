@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+
+$fontColor: purple;
+$fontFamily: 'Sofia',cursive;
+
+h1 {
+    text-align: center;
+    color: $fontColor;
+    font-weight: bolder;
+    font-family: $fontFamily;
+
+}
+h4 {
+    text-align: center;
+    color: $fontColor;
+    font-family: $fontFamily;
+
+}
+
+div.description {
+    font-family: $fontFamily;
+    font-size: 150%;
+    font-stretch: extra-expanded;
+}
+
+* {
+    font-family: $fontFamily;
+    max-width: 100%;
+}

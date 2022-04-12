@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecipeComponent } from './recipe/recipe.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
     RecipeComponent,
     LoginpageComponent,
     WelcomePageComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

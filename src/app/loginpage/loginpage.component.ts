@@ -22,8 +22,7 @@ export class LoginpageComponent implements OnInit {
 
 
    onSubmit(login:any) {
-    console.log(login.form);
-     console.log(login.form.status);
+    this.isValid=login.form.status;
    }
   
 

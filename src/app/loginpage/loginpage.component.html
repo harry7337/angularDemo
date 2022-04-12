@@ -14,7 +14,6 @@
               isValid=false;
 
               <div *ngIf="name.errors?.['required']">
-                Name is required.
               </div>
               <div *ngIf="name.errors?.['minlength']">
                 Name must be at least 4 characters long.
@@ -23,11 +22,10 @@
 
             <div>
                 <label for="psw"><b>Password</b></label><br>
-                <input class="form-control inputbox" id="psw" name="psw" type="password" placeholder="Enter Password" #psw="ngModel" minlength="4" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" [(ngModel)]="user.psw" required>
+                <input class="form-control inputbox" id="psw" name="psw" type="password" placeholder="Enter Password" #psw="ngModel" minlength="4" [(ngModel)]="user.psw" required>
             </div>
     
             <div *ngIf="psw.invalid && (psw.dirty || psw.touched)" class="alert">
-              isValid=false;
               <div *ngIf="psw.errors?.['required']">
                 Password is required.
               </div>
@@ -40,16 +38,13 @@
             <div *ngIf="isValid">
               Submitted!!
             </div>
-            
 
           <button type="submit">Login</button>
         </div>
       </form>
       <div id="message">
         <h3>Password must contain the following:</h3>
-        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-        <p id="number" class="invalid">A <b>number</b></p>
-        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        <p class="invalid">Minimum <b>8 characters</b></p>
+        <p class="invalid">It is a  <b>Required </b>field</p>
       </div>
 </div>
